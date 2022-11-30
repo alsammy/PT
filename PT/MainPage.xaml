@@ -2,40 +2,94 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PT.MainPage">
-
     <ScrollView>
+
         <VerticalStackLayout
             Spacing="25"
             Padding="30,0"
             VerticalOptions="Center">
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+            <Border WidthRequest="200"
+                    Stroke="Green"
+                    HeightRequest="200"
+                    StrokeThickness="4"
+                    StrokeShape="RoundRectangle 100">
+
+                <Image 
+                    Source="karina.jpg"
+                    HeightRequest="200"
+                    WidthRequest="200"
+                    />
+            </Border>
 
             <Label
-                Text="Hello, World!"
+                Text="Yu Ji Min (Karina)"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
                 HorizontalOptions="Center" />
 
             <Label
-                Text="Welcome to .NET Multi-platform App UI"
+                Text="April 11, 2000"
                 SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
                 FontSize="18"
                 HorizontalOptions="Center" />
 
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
+            <Label
+                Text="Voted as one of the best looking K-Pop idol up to date!"
+                SemanticProperties.HeadingLevel="Level3"
+                FontSize="14"
                 HorizontalOptions="Center" />
 
-        </VerticalStackLayout>
-    </ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Age: 22"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       BackgroundColor="CornflowerBlue" />
+                <Label Grid.Column="1"
+                       BackgroundColor="Cyan"
+                       Text="Height: 167.8cm" 
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"/>
+                <Label Grid.Column="2"
+                       BackgroundColor="CornflowerBlue"
+                       Text="Weight: 45kg" 
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"/>
+                <Label Grid.Column="3"
+                       BackgroundColor="Cyan"
+                       Text="Nationality: Korean"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
 
+                <Image Grid.Row="1"
+                       Source="karina1.jpg" />
+
+                <Image Grid.Row="1"
+                       Grid.Column="1"
+                       Source="karina2.jpg" />
+
+                <Image Grid.Row="2"
+                       Source="karina3.jpg" />
+
+                <Image Grid.Row="2"
+                       Grid.Column="1"
+                       Source="karina4.jpg" />
+                
+            </Grid>
+ 
+        </VerticalStackLayout>
+    
+    </ScrollView>
 </ContentPage>
